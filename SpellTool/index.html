@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Dark Souls 3 Spell Tool - by JerpDoesGames</title>
+		<script src="spell_tool.js"></script>
+	</head>
+	<body onload="toolInstance.initialize();">
+		<input type="number" id="controlFlatDefenseGlobal" min="0" max="500"></input>Flat Global<br/>
+		<input type="number" id="controlFlatDefense0" min="0" max="500"></input>Flat Physical<br/>
+		<input type="number" id="controlFlatDefense1" min="0" max="500"></input>Flat Magic<br/>
+		<input type="number" id="controlFlatDefense2" min="0" max="500"></input>Flat Fire<br/>
+		<input type="number" id="controlFlatDefense3" min="0" max="500"></input>Flat Lightning<br/>
+		<input type="number" id="controlFlatDefense4" min="0" max="500"></input>Flat Dark<br/>
+		<br/>
+		<!--
+			* Will want to add checkboxes for global/non-global spell buff, absorption, flat defense
+			  - These will ideally show/hide the non-global options and enable-disable the global settings
+		-->
+		<input type="number" id="controlAbsorptionGlobal" min="0" max="99"></input>Abs Global<br/>
+		<input type="number" id="controlAbsorption0" min="0" max="99"></input>Abs Physical<br/>
+		<input type="number" id="controlAbsorption1" min="0" max="99"></input>Abs Magic<br/>
+		<input type="number" id="controlAbsorption2" min="0" max="99"></input>Abs Fire<br/>
+		<input type="number" id="controlAbsorption3" min="0" max="99"></input>Abs Lightning<br/>
+		<input type="number" id="controlAbsorption4" min="0" max="99"></input>Abs Dark<br/>
+		<br/>
+		<input type="number" id="controlSpellBuffGlobal" min="60" max="999"></input>Buff Global<br/>
+		<input type="number" id="controlSpellBuff0" min="60" max="999"></input>Buff Sorcery<br/>
+		<input type="number" id="controlSpellBuff1" min="60" max="999"></input>Buff Miracles<br/>
+		<input type="number" id="controlSpellBuff2" min="60" max="999"></input>Buff Pyromancies<br/>
+		<br/>
+		<select id="controlSort">
+			<option value="0" selected>Damage/FP</option> 
+		 	<option value="1">AR/FP</option>
+			<option value="2">Net Damage</option>
+			<option value="3">Net AR</option>
+		</select> Sort by
+		<br/>
+		<select id="controlHelmSelector"></select>Helm<br/>
+		<select id="controlRingSelector0"></select>Ring 1<br/>
+		<select id="controlRingSelector1"></select>Ring 2<br/>
+		<select id="controlRingSelector2"></select>Ring 3<br/>
+		<select id="controlRingSelector3"></select>Ring 4<br/>
+		<!--<input type="checkbox" id="controlBodyBuffToggle14"/>Right Eye<br/>-->
+		<input type="checkbox" id="controlBodyBuffToggle21"/>Awakening<br/>
+		<input type="checkbox" id="controlBodyBuffToggle22"/>Old Wolf Curved Sword<br/>
+		<input type="checkbox" id="controlBodyBuffToggle23"/>Deep Protection<br/>
+		<input type="checkbox" id="controlBodyBuffToggle24"/>Sacred Oath<br/>
+		<input type="checkbox" id="controlBodyBuffToggle25"/>Power Within<br/>
+		<input type="checkbox" id="controlIsPvp" checked/>PvP?<br/>
+		<input type="checkbox" id="controlShowDamageType0" checked/>Show Physical<br/>
+		<input type="checkbox" id="controlShowDamageType1" checked/>Show Magic<br/>
+		<input type="checkbox" id="controlShowDamageType2" checked/>Show Fire<br/>
+		<input type="checkbox" id="controlShowDamageType3" checked/>Show Lightning<br/>
+		<input type="checkbox" id="controlShowDamageType4" checked/>Show Dark<br/>
+		<input type="checkbox" id="controlShowSpellType0" checked/>Show Sorceries<br/>
+		<input type="checkbox" id="controlShowSpellType1" checked/>Show Miracles<br/>
+		<input type="checkbox" id="controlShowSpellType2" checked/>Show Pyromancies<br/>
+		<div id="outputDiv">
+		</div>
+	</body>
+</html>
